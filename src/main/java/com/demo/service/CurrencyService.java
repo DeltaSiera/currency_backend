@@ -26,7 +26,8 @@ public class CurrencyService {
     public List<CurrencyEntity> getCurrencyRecords() {
         Map<String, CurrencyEntity> collect = currencyRepository.findAll()
                                                                 .stream()
-                                                                .collect(Collectors.toMap(CurrencyEntity::getName, Function.identity(), BinaryOperator.maxBy(Comparator.comparing(CurrencyEntity::getDate))));
+                                                                .collect(Collectors.toMap(CurrencyEntity::getName, Function.identity(),
+                                                                        BinaryOperator.maxBy(Comparator.comparing(CurrencyEntity::getDate))));
 
         return new ArrayList<>(collect.values());
     }
