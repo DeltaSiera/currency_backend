@@ -5,10 +5,10 @@ services:
     build: .
     ports:
       - "9000:9000"
-  currency-ui:
-    build: ./currency-ui
-    container_name: currency-ui
-    ports:
-      - "4200:80"
-    links:
-      - currency-service
+#  currency-ui:
+#    build: ./currency-ui
+#    container_name: currency-ui
+#    ports:
+#      - "4200:80"
+#    links:
+#      - currency-service
